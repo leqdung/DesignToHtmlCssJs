@@ -1,0 +1,14 @@
+10 thẻ inline:
+- a,b,br, font, i, var, q, u, label, span, tt, input
+============
+10 thẻ block:
+- div,p,a,link,header,footer,nav,ol,li,dl,dt,dd,p,hx
+============
+BEM cho block tên là 'boy'
+Boy__Age--Football,Boy__Habit--Lovers
+============
+<div>
+    <a href="#" alt="Image tag" >Link Image <i></i></a>
+</div>
+============
+Block dropdown
