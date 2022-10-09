@@ -1,25 +1,26 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
 }
 
-.modal {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.44);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
+img {
+  display: block;
+  max-width: 100%;
 }
-.modal__content {
-  width: 70%;
-  height: 80%;
-  background-color: #fff;
-  padding: 5rem;
+.video {
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+.video__image {
+  object-fit: cover;
+  position: absolute;
+}
+.video__icon {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
 }
