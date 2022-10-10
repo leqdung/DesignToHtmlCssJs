@@ -16,8 +16,12 @@ body {
   border-radius: 1rem;
 }
 .bar-circle {
-  width: 100%;
-  height: 50%;
+  width: 25px;
+  height: 25px;
   border-radius: 2rem;
-  background-color: #red;
+  background-color: green;
+  position: absolute;
+  left: 51%;
+  top: 14.7%;
+  transform: translate(-50%, -50%);
 }
