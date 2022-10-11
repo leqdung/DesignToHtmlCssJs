@@ -3,18 +3,17 @@ body {
   height: 100vh;
 }
 
-.image {
-  /* display block và margin 0 auto đi kèm với nhau để căn giữa */
-  /* /* display: block; */
-  margin: 0 auto;
-  width: 200px;
-  height: 499px;
-  /* sử dụng object fit cover để tránh kéo dãn hình ảnh */
-  object-fit: cover;
-  object-position: top;
-}
-/* muốn cắn giữa item inline ta dùng div bao bọc, sử dụng text align center */
-.image-wraper {
-  text-align: center;
-  /* chỉ áp dụng với các element là inline /inline block */
+.boxed {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 20rem;
+  background-image: linear-gradient(to left bottom, yellow, blue);
+  /* border-radius: 20rem; */
+  /* direction: to right, to left, to bottom to top,
+  to right to bottom, to left bottom, to left top,
+  to right top,
+  120 deg
+  color1
+  color2 */
+  /* background-image: radial-gradient(red 20%, yellow 40%, blue 120%); */
 }
