@@ -9,3 +9,6 @@ body {
   margin: 5rem auto;
   box-shadow: 5px 7px 6px 6px green;
 }
+h2 {
+  text-shadow: 5px 7px 8px yellow;
+}
