@@ -1,0 +1,102 @@
+$blue-color: #43a7fe;
+@mixin size($width, $hight: $width) {
+  width: $width;
+  height: $hight;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  background-color: #f3faff;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+.dropdown {
+  width: 20rem;
+  margin: 2rem auto 0;
+  position: relative;
+  &__select {
+    padding: 1.5rem 2.5rem 2rem 2rem;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    // justify-content: space-between;
+  }
+  &__text {
+    margin-left: 1.5rem;
+  }
+  &__caret {
+    margin-left: auto;
+  }
+  &__item {
+    padding: 1.5rem 2.5rem 2rem 2rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    border-left: 3px solid transparent;
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    &:hover {
+      color: #74809d;
+      border-left-color: $blue-color;
+    }
+  }
+  &__list {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    margin-top: 3rem;
+    margin-top: 3rem;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+    // opacity: 0;
+    // visibility: hidden;
+    transition: all 0.25s linear;
+    &::before {
+      content: "";
+      @include size(2rem);
+      //   border-left: 10px solid transparent;
+      //   border-right: 10px solid transparent;
+      //   border-bottom: 10px solid white;
+      position: absolute;
+      background-color: white;
+      border-radius: 3px;
+      top: 1rem;
+      right: 2rem;
+      transform: translateY(-100%) rotate(45deg);
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include size(100%, 3rem);
+    }
+  }
+  &:hover {
+    .dropdown__list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
