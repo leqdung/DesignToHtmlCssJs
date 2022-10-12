@@ -68,3 +68,32 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.effect {
+  text-decoration: none;
+  display: inline-block;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid orange;
+  margin: 5rem;
+  transition: color 0.25s linear;
+  position: relative;
+  z-index: 1;
+}
+.effect::before {
+  content: "";
+  background-color: orange;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.25s linear;
+}
+.effect:hover::before {
+  height: 100%;
+}
+.effect:hover {
+  color: white;
+}
