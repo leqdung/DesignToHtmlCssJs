@@ -2,13 +2,59 @@ body {
   width: 100%;
   height: 100vh;
 }
-.boxed1 {
-  width: 10rem;
-  height: 11rem;
+/* 
+.test {
+  font-size: 2rem;
+  /* position: relative; */
+/* left: 2rem; */
+
+.title::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 2rem;
   background-color: red;
-  cursor: pointer;
-  transition: background-color 1s linear;
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.boxed1:hover {
-  background-color: green;
+.title {
+  position: absolute;
+  left: 2rem;
+}
+
+.title2::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title2 {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  z-index: 2;
+}
+.icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4px;
+  margin: 5rem auto;
+  background: black;
+  color: red;
+  position: relative;
+}
+.icon__user {
+  position: absolute;
+  /* display: inline-block;
+  text-align: center; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
