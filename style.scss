@@ -1,4 +1,5 @@
 $blue-color: #43a7fe;
+$green-color: #00c899;
 @mixin size($width, $hight: $width) {
   width: $width;
   height: $hight;
@@ -22,81 +23,61 @@ a {
 img {
   display: block;
   max-width: 100%;
+  margin: 0 auto;
 }
-.dropdown {
-  width: 20rem;
-  margin: 2rem auto 0;
-  position: relative;
-  &__select {
-    padding: 1.5rem 2.5rem 2rem 2rem;
-    background-color: blue;
-    color: white;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    // justify-content: space-between;
-  }
-  &__text {
-    margin-left: 1.5rem;
-  }
-  &__caret {
-    margin-left: auto;
-  }
-  &__item {
-    padding: 1.5rem 2.5rem 2rem 2rem;
-    color: black;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    border-left: 3px solid transparent;
-    &:not(:last-child) {
-      border-bottom: 1px solid #eee;
-    }
-    &:hover {
-      color: #74809d;
-      border-left-color: $blue-color;
-    }
-  }
-  &__list {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    margin-top: 3rem;
-    margin-top: 3rem;
-    border-radius: 4px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
-    // opacity: 0;
-    // visibility: hidden;
-    transition: all 0.25s linear;
+.work {
+  max-width: 1200px;
+  padding: 2rem;
+  &__heading {
+    color: #1a0a3b;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    // border-bottom: 2px solid $green-color;
+    // display: inline-block;
+    padding-bottom: 2rem;
+    position: relative;
     &::before {
-      content: "";
-      @include size(2rem);
-      //   border-left: 10px solid transparent;
-      //   border-right: 10px solid transparent;
-      //   border-bottom: 10px solid white;
       position: absolute;
-      background-color: white;
-      border-radius: 3px;
-      top: 1rem;
-      right: 2rem;
-      transform: translateY(-100%) rotate(45deg);
-      z-index: -1;
-    }
-    &::after {
       content: "";
-      position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
-      @include size(100%, 3rem);
+      @include size(3.5rem, 6px);
+      border-radius: 4px;
+      background-color: $green-color;
     }
   }
-  &:hover {
-    .dropdown__list {
-      opacity: 1;
-      visibility: visible;
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  &-tab {
+    display: flex;
+    &__item {
+      cursor: pointer;
+      padding: 1rem 1.5rem;
+      border: 1px solid $green-color;
+      border-radius: 2rem 0 2rem 2rem;
+      text-align: center;
+      &:hover {
+        color: white;
+        background-color: $green-color;
+      }
+      transition: 0.2s all;
+      &:not(:first-child) {
+        margin-left: 1.1rem;
+      }
     }
+  }
+  &__all {
+    display: inline-block;
+    color: $green-color;
+    padding: 5px 1rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    background-color: rgba($green_color, 0.25);
   }
 }
