@@ -96,4 +96,31 @@ img {
   object-position: right;
 }
 
+@media screen and (max-width: 767px) {
+  .work__filter {
+    flex-direction: column;
+  }
+  .work__all {
+    margin: 1rem 1rem 1rem 2rem;
+  }
+  .work-tab {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .work-tab__item {
+    margin-bottom: 1rem;
+    display: flex;
+  }
+  .work__item {
+    width: calc(100% - 1.5rem);
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .work__item {
+    width: calc(43% - 1.5rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

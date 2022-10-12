@@ -97,3 +97,35 @@ img {
     object-position: right; //ưu tiên hiện ra phần thừa
   }
 }
+@media screen and (max-width: 767px) {
+  .work {
+    &__filter {
+      flex-direction: column;
+    }
+    &__all {
+      margin: 1rem 1rem 1rem 2rem;
+    }
+    &-tab {
+      flex-wrap: wrap;
+      justify-content: center;
+      &__item {
+        margin-bottom: 1rem;
+        display: flex;
+      }
+    }
+    &__item {
+      width: calc(100% - 1.5rem);
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .work {
+    &__item {
+      width: calc(43% - 1.5rem);
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+}
