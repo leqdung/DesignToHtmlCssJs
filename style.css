@@ -2,37 +2,33 @@ body {
   width: 100%;
   height: 100vh;
 }
-.circle__loading {
-  width: 5rem;
-  height: 5rem;
-  background-color: violet;
-  margin: 5rem auto;
-  border-radius: 50%;
-  position: relative;
-  /* transform: scale(2);
-  opacity: 0.2; */
-  /* animation: fade 1s forwards alternate infinite linear; */
+.circles {
+  text-align: center;
+  margin: 5rem;
+  /* transform: rotate(200deg); */
+  /* transform: rotate(180deg); */
+  /* transform: rotate(160deg); */
+  animation: loading 1s infinite;
 }
-.circle__loading::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  height: 100%;
-  background-color: inherit;
-  border-radius: inherit;
-  animation: fade 1s forwards alternate infinite linear;
-}
-
-@keyframes fade {
-  /* from {
-    transform: scale(1);
-    opacity: 1;
-  } */
-  100% {
-    transform: scale(2);
-    opacity: 0;
+@keyframes loading {
+  50% {
+    transform: rotate(200deg);
   }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.circle__item {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  border: 3px solid rgb(31, 157, 183);
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+.circle__item:first-child {
+  border-color: cyan;
 }
