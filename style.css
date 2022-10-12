@@ -78,5 +78,22 @@ img {
   font-size: 1.4rem;
   background-color: rgba(0, 200, 153, 0.25);
 }
+.work__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.5rem;
+}
+.work__item {
+  width: calc(25% - 1.5rem);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 1.5rem;
+}
+.work__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
 
 /*# sourceMappingURL=style.css.map */

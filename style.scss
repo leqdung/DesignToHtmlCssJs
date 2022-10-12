@@ -80,4 +80,20 @@ img {
     font-size: 1.4rem;
     background-color: rgba($green_color, 0.25);
   }
+  &__list {
+    display: flex;
+    flex-wrap: wrap; //kiểm tra xem item bị rớt hàng không
+    margin-left: -1.5rem; //thủ thuật fix lỗi bên trái phần tử đầu tiên
+  }
+  &__item {
+    width: calc(25% - 1.5rem);
+    border-radius: 6px;
+    overflow: hidden; //làm cho ẩn đi phần item bị trào
+    margin-left: 1.5rem;
+  }
+  &__image {
+    @include size(100%);
+    object-fit: cover;
+    object-position: right; //ưu tiên hiện ra phần thừa
+  }
 }
