@@ -11,6 +11,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   background-color: #f2f2f2;
+  padding: 2rem;
 }
 
 a {
@@ -24,26 +25,112 @@ img {
 }
 
 .post {
-  max-width: 40%;
-  padding: 5rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.post__left, .post__right {
+  width: calc(100% - 1rem);
+}
+.post__media {
+  height: 40rem;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+.post__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  position: absolute;
+}
+.post__category {
   display: inline-block;
-  background-color: white;
-  border-radius: 10px;
+  width: 9rem;
+  height: 3rem;
+  padding: 0.7rem;
+  border-radius: 14px;
+  background-image: linear-gradient(to right, #fc556f, #fd9c84);
+  color: white;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.post__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  right: 2rem;
+  bottom: 0;
+  transform: translateY(50%);
+  background-image: linear-gradient(to right, #fc556f, #fd9c84);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+.post__author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-style: 1.4rem;
+}
+.post-author {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.post__media {
-  width: 10rem;
-  height: 10rem;
-  border-radius: inherit;
-  flex-shrink: 0;
+.post-author__avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  object-fit: cover;
+  margin-left: 1rem;
 }
-.post__content {
-  flex-grow: 1;
-  width: 100%;
+.post__date {
+  position: relative;
+  margin-left: 2.5rem;
+  padding-left: 2.5rem;
+}
+.post__date::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fc556f;
+}
+.post__title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(74, 74, 74);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.post__desc {
+  font-weight: normal;
+  color: grey;
+  line-height: 1.2;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 {
   "editor.fontSize": 12,
-  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "liveServer.settings.CustomBrowser": "chrome"
 }
