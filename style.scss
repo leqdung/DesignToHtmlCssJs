@@ -14,7 +14,7 @@ body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
-  background-color: #dcdcdd;
+  background-color: #f2f2f2;
 }
 a {
   text-decoration: none;
@@ -26,51 +26,33 @@ img {
   margin: 0 auto;
 }
 @mixin flexbox(
-  $aligin: flex-start,
+  $align: flex-start,
   $justify: flex-start,
   $flex-direction: row,
   $wrap: nowrap
 ) {
   display: flex;
-  align-items: $aligin;
+  align-items: $align;
   justify-content: $justify;
   flex-direction: $flex-direction;
   flex-wrap: $wrap;
 }
-
 .post {
-  &__list {
-    padding: 2rem;
-    @include flexbox(stretch);
-    margin-left: -2rem;
-  }
-  &__item {
-    margin-left: 2rem;
-    width: calc(33.33% - 2rem);
-  }
-  &__image {
-    width: 100%;
-    height: 22rem;
-    object-fit: cover;
+  max-width: 40%;
+  padding: 5rem auto;
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  @include flexbox(center);
+  &__media {
+    width: 10rem;
+    height: 10rem;
+    border-radius: inherit;
+    flex-shrink: 0;
   }
   &__content {
-    padding: 2rem;
-    background-color: #fff;
-    height: calc(100% - 20rem);
-    @include flexbox(flex-start, flex-start, column);
-  }
-  &__title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  &__author {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 5rem;
-    object-fit: cover;
-    border: 1px solid red;
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-top: auto;
+    // width: calc(100% - 10rem);
+    flex-grow: 1;
+    width: 100%;
   }
 }
