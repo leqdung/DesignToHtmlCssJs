@@ -25,107 +25,69 @@ img {
   max-width: 100%;
   margin: 0 auto;
 }
-.work {
+.author {
   max-width: 1200px;
-  padding: 2rem;
-  &__heading {
-    color: #1a0a3b;
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin-bottom: 3rem;
-    // border-bottom: 2px solid $green-color;
-    // display: inline-block;
-    padding-bottom: 2rem;
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 0;
-      @include size(3.5rem, 6px);
-      border-radius: 4px;
-      background-color: $green-color;
-    }
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  background-color: #eee;
+  justify-content: center;
+  height: 40rem;
+  &__image {
+    height: 100%;
+    object-fit: cover;
   }
-  &__filter {
+  &__content {
+    padding: 3rem;
+  }
+  &__name {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  &__desc {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    text-align: justify;
+  }
+
+  &__contact {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
   }
-  &-tab {
+  &-social {
     display: flex;
+    align-items: center;
     &__item {
-      cursor: pointer;
-      padding: 1rem 1.5rem;
-      border: 1px solid $green-color;
-      border-radius: 2rem 0 2rem 2rem;
-      text-align: center;
-      &:hover {
-        color: white;
-        background-color: $green-color;
-      }
-      transition: 0.2s all;
-      &:not(:first-child) {
-        margin-left: 1.1rem;
-      }
+      margin-left: 2rem;
     }
   }
-  &__all {
-    display: inline-block;
-    color: $green-color;
-    padding: 5px 1rem;
-    border-radius: 1rem;
-    font-size: 1.4rem;
-    background-color: rgba($green_color, 0.25);
-  }
-  &__list {
-    display: flex;
-    flex-wrap: wrap; //kiểm tra xem item bị rớt hàng không
-    margin-left: -1.5rem; //thủ thuật fix lỗi bên trái phần tử đầu tiên
-  }
-  &__item {
-    width: calc(25% - 1.5rem);
-    border-radius: 6px;
-    overflow: hidden; //làm cho ẩn đi phần item bị trào
-    margin-left: 1.5rem;
-  }
-  &__image {
-    @include size(100%);
-    object-fit: cover;
-    object-position: right; //ưu tiên hiện ra phần thừa
+}
+@media screen and (min-width: 768px) {
+  .author {
+    &__image {
+      width: 35%;
+    }
+    &__content {
+      width: 65%;
+    }
   }
 }
 @media screen and (max-width: 767px) {
-  .work {
-    &__filter {
-      flex-direction: column;
+  .author {
+    padding: 0;
+    flex-direction: column;
+    height: auto;
+    &__image,
+    &__content {
+      width: 100%;
     }
-    &__all {
-      margin: 1rem 1rem 1rem 2rem;
-    }
-    &-tab {
-      flex-wrap: wrap;
-      justify-content: center;
-      &__item {
-        margin-bottom: 1rem;
-        display: flex;
-      }
-    }
-    &__item {
-      width: calc(100% - 1.5rem);
-      margin-bottom: 1.5rem;
+    &__image {
+      padding: 0;
     }
   }
-}
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-  .work {
-    &__item {
-      width: calc(43% - 1.5rem);
-      margin-bottom: 1.5rem;
-    }
-  }
-}
-@media screen and (max-width: 1279px) and (min-width: 1024px) {
 }
